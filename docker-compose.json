@@ -1,0 +1,24 @@
+{
+  "version": "3.5",
+  "services": {
+    "fortune-api": {
+      "build": "./backend",
+      "volumes": ["./backend:/usr/src/forbackend"]
+    },
+
+    "sweetier-api": {
+      "build": "./backend",
+      "volumes": ["./backend:/usr/src/forbackend"]
+    },
+
+    "angrier-api": {
+      "build": "./backend",
+      "volumes": ["./backend:/usr/src/forbackend"]
+    },
+
+    "nginx-loadbalancer": {
+      "build": "./loadbalancer",
+      "ports": ["49010:80"]
+    }
+  }
+}
